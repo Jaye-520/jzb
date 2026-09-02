@@ -1,0 +1,2 @@
+# 部署到 Vercel 时不需要上传的文件（源图已 base64 内嵌于 index.html）
+assets/
