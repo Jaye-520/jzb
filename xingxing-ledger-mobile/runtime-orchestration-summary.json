@@ -1,0 +1,264 @@
+{
+  "schemaVersion": "1.0",
+  "skillProvenance": {
+    "name": "solo-design",
+    "version": "2026.08.06.19.15.08",
+    "version_source": "skill-release-manifest.json",
+    "schema_version": "1.0",
+    "release": "prompt-base-cloud-ssot-migration",
+    "read_status": "loaded"
+  },
+  "project": {
+    "operation": "create",
+    "resolvedLane": "complex_html_page",
+    "intentProfile": {
+      "caseFamily": "complex_html_page",
+      "deviceTarget": "mobile",
+      "stateExpansion": false,
+      "multiStyle": false
+    },
+    "selectedIntentWorkflowRead": true,
+    "contextRequirementsLoaded": [
+      {
+        "path": "intent-workflows/intent-project-complex-build/INTENT_WORKFLOW.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-09-02T12:05:00+08:00"
+      },
+      {
+        "path": "shared-runtime/runtime-boundaries/lane-runtime-contracts.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-09-02T12:05:00+08:00"
+      },
+      {
+        "path": "shared-runtime/agent-dispatch-runtime/lane-dispatch-index.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-09-02T12:05:00+08:00"
+      },
+      {
+        "path": "delivery-quality/page-rendering-quality-gate.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-09-02T12:05:00+08:00"
+      },
+      {
+        "path": "delivery-quality/design-artifact-validation.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-09-02T12:05:00+08:00"
+      }
+    ],
+    "contextReadScope": "complex_html_page_lane_runbooks",
+    "readScopeLedger": [
+      {
+        "scope": "complex_html_page_lane_runbooks",
+        "recordedAt": "2026-09-02T12:05:00+08:00"
+      }
+    ],
+    "projectName": "星星人记账工作台移动端重设计",
+    "deviceType": "mobile",
+    "designRead": "记账H5 / 个人及家庭用户 / 温馨可爱 / 中高密度 / 避免信息拥挤与 tiny tap targets",
+    "designDials": {
+      "layoutVariance": 3,
+      "motionIntensity": 2,
+      "visualDensity": 4
+    },
+    "styleDefinitionBrief": "温馨可爱风个人记账H5：奶油暖白底、暖金主色、圆润卡片、清晰数据层级、emoji 头像点缀，让记账有陪伴感。",
+    "cssPreflightEvidence": {
+      "scriptPath": "shared-runtime/deterministic-tooling/apply-html-head-contract.mjs",
+      "cssFilePath": "colors_and_type.css",
+      "preflightOutputPath": ".preflight/preflight.html",
+      "exitCode": 0,
+      "success": true,
+      "recordedAt": "2026-09-02T12:05:00+08:00"
+    },
+    "mobileNavigation": {
+      "applies": true,
+      "type": "drawer",
+      "items": [
+        { "key": "overview", "label": "概览", "icon": "home" },
+        { "key": "detail", "label": "明细", "icon": "list" },
+        { "key": "stats", "label": "统计", "icon": "bar-chart-2" },
+        { "key": "report", "label": "报表", "icon": "pie-chart" },
+        { "key": "budget", "label": "预算", "icon": "target" },
+        { "key": "accounts", "label": "账户", "icon": "wallet" },
+        { "key": "finance", "label": "理财", "icon": "trending-up" },
+        { "key": "loans", "label": "借贷", "icon": "repeat" },
+        { "key": "goals", "label": "目标", "icon": "award" },
+        { "key": "templates", "label": "模板", "icon": "file-text" },
+        { "key": "recurring", "label": "周期", "icon": "refresh-cw" },
+        { "key": "books", "label": "账本", "icon": "book-open" },
+        { "key": "calendar", "label": "日历", "icon": "calendar" },
+        { "key": "fitness", "label": "减脂", "icon": "heart-pulse" },
+        { "key": "period", "label": "经期", "icon": "flower-2" },
+        { "key": "settings", "label": "设置", "icon": "settings" }
+      ],
+      "heightPx": 64,
+      "position": "flow-bottom",
+      "activeState": "primary icon+label color only; geometry stays identical",
+      "structure": {
+        "navTag": "nav",
+        "navClass": "fixed bottom-0 left-0 right-0 z-50 pb-[var(--xingxing-safe-bottom)]",
+        "innerClass": "w-full max-w-[480px] mx-auto h-[64px] grid grid-cols-4 gap-1 px-2",
+        "itemTag": "button",
+        "itemClass": "min-w-0 flex flex-col items-center justify-center gap-0.5 px-1 h-full rounded-xl",
+        "iconClass": "w-5 h-5 shrink-0",
+        "labelClass": "text-[11px] leading-none whitespace-nowrap max-w-full truncate",
+        "activeRule": "only color/font-weight/data-active may change; no class changes that affect layout",
+        "markerAttr": "data-mobile-nav=\"global\"",
+        "canonicalHtmlByKey": {}
+      }
+    },
+    "generationTree": {
+      "root": {
+        "nodeId": "gen-project-shell",
+        "kind": "project-shell",
+        "pageIds": ["page-index"],
+        "output": "partials/project-shell.html",
+        "sharedRegions": ["head", "mobile-shell", "bottom-sheet-nav", "modal-shell"],
+        "privateRegions": [],
+        "mutableSlots": [],
+        "status": "generated",
+        "children": [
+          {
+            "nodeId": "gen-page-index",
+            "kind": "page-leaf",
+            "pageIds": ["page-index"],
+            "output": "pages/index.html",
+            "sharedRegions": ["project-shell"],
+            "privateRegions": ["module-content"],
+            "mutableSlots": ["module-content"],
+            "status": "generated",
+            "children": []
+          }
+        ]
+      }
+    },
+    "dispatchPreflightManifest": [
+      {
+        "nodeId": "page-index",
+        "htmlSrc": "pages/index.html",
+        "laneContract": "complex_html_page",
+        "sharedTemplate": "shared-runtime/agent-dispatch-runtime/shared-page-rendering-kernel.md",
+        "supplementaryReads": [],
+        "allowedWritePaths": ["pages/index.html"],
+        "forbiddenWriteRoots": [".design", "runtime-orchestration-summary.json", "validation-report.json"]
+      }
+    ],
+    "expectedDispatches": [
+      {
+        "nodeId": "page-index",
+        "packetType": "page-leaf",
+        "status": "not_required",
+        "changedFiles": [],
+        "toolCallLedger": []
+      }
+    ],
+    "validationRunDiscipline": {
+      "validateDesignWorkspace": true,
+      "validateFinishReadiness": true,
+      "recordedAt": "2026-09-02T12:05:00+08:00"
+    },
+    "validationHistory": [
+      {
+        "script": "validate-design-workspace.mjs",
+        "reportPath": "validation-report.json",
+        "success": true,
+        "recordedAt": "2026-09-02T12:35:00+08:00"
+      },
+      {
+        "script": "validate-finish-readiness.mjs",
+        "success": true,
+        "recordedAt": "2026-09-02T12:35:00+08:00"
+      }
+    ],
+    "validationRepairLedger": [],
+    "validationSnapshot": {
+      "designFileCount": 1,
+      "pageFileCount": 1,
+      "imageNodeCount": 0
+    },
+    "artifactReadinessEvidence": {
+      "workspaceIndexHtmlUpdated": true,
+      "designProjectPath": "xingxing-ledger-mobile",
+      "readyForPreview": true,
+      "notes": "removed heavy backdrop-filter blur on sidebar/drawer/modal; added font smoothing fixes",
+      "recordedAt": "2026-09-02T12:35:00+08:00"
+    },
+    "lowValueCallWatchdog": {
+      "applies": true,
+      "noProgressSignals": ["no_tool_call", "no_artifact_diff", "no_structured_decision"],
+      "noProgressNextAction": "enter_readiness_or_blocked_summary",
+      "recordedAt": "2026-09-02T12:05:00+08:00"
+    },
+    "sourceAuthorityLock": {
+      "visualAuthority": "user-provided-application",
+      "contentSupplement": "existing-index-html",
+      "browserObservationRole": "none",
+      "mayOverrideVisualAuthority": false,
+      "lockedBeforeDispatch": true
+    },
+    "visualQualityCheckpoints": [
+      {
+        "checkpointId": "vq-anchor",
+        "dimension": "visual-anchor",
+        "expected": "顶部温馨 banner 与星星人头像作为每个模块的视觉锚点",
+        "evidenceTarget": "pages/index.html#banner"
+      },
+      {
+        "checkpointId": "vq-hierarchy",
+        "dimension": "information-hierarchy",
+        "expected": "数据卡片 > 列表 > 操作按钮，金额与标签清晰可辨",
+        "evidenceTarget": "pages/index.html#view"
+      },
+      {
+        "checkpointId": "vq-structure",
+        "dimension": "composition-structure",
+        "expected": "移动端单栏布局，卡片间距一致，底部抽屉导航不遮挡内容",
+        "evidenceTarget": "pages/index.html"
+      },
+      {
+        "checkpointId": "vq-implementation",
+        "dimension": "implementation-strategy",
+        "expected": "CSS 变量 + Tailwind v4 运行时 + 保留原 JS 数据逻辑，仅替换视觉层",
+        "evidenceTarget": "pages/index.html"
+      }
+    ]
+  },
+  "designSource": {
+    "operatingMode": "free-explore",
+    "libraryIdentity": null,
+    "cssFilePath": "colors_and_type.css",
+    "brandPrefix": "xingxing",
+    "styleConstraints": {
+      "radiusMax": 16,
+      "staticShadowAlphaMax": 0.05,
+      "allowEmojiIcons": true,
+      "singleBrandHue": true
+    }
+  },
+  "pages": [
+    {
+      "nodeId": "page-index",
+      "title": "星星人记账工作台",
+      "htmlSrc": "pages/index.html",
+      "pageIndex": 1,
+      "visualNorthStar": "温馨可爱的个人记账工作台首页：顶部 banner 展示模块头像与账本切换，主体为模块内容区，底部常驻快捷导航抽屉。",
+      "compositionPattern": "mobile-app-shell: header banner + scrollable module content + floating action button + bottom sheet nav",
+      "continuityAnchors": [
+        "所有模块共享同一 banner 组件、卡片圆角与暖金主色",
+        "底部导航与快捷操作按钮位置固定，切换模块时保持肌肉记忆"
+      ],
+      "componentPlan": ["banner", "stat-card", "list-row", "modal", "toast", "bottom-nav"],
+      "imagePlan": [],
+      "chartsRequired": false,
+      "miniProgramStyle": false,
+      "mobileNavigationActiveKey": "overview"
+    }
+  ],
+  "assets": [],
+  "wiringPlan": [],
+  "hiddenInteractionPlan": []
+}

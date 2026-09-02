@@ -1,2 +1,5 @@
 # 部署到 Vercel 时不需要上传的文件（源图已 base64 内嵌于 index.html）
 assets/
+
+# 移动端重设计工程工作区（非部署产物）
+xingxing-ledger-mobile/

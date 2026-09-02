@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preflight</title>
+    <style id="theme-vars">
+/* 星星人记账工作台 — 温馨可爱风移动端设计系统 */
+
+:root {
+  /* Brand primary scale — warm golden, single identity hue */
+  --xingxing-primary-50: #fff9e6;
+  --xingxing-primary-100: #ffefbd;
+  --xingxing-primary-200: #ffe494;
+  --xingxing-primary-300: #ffd56a;
+  --xingxing-primary-400: #ffc241;
+  --xingxing-primary-500: #f6b93b;
+  --xingxing-primary-600: #e09c1f;
+  --xingxing-primary-700: #b87a12;
+  --xingxing-primary-800: #8a5f1e;
+  --xingxing-primary-900: #5c3f14;
+
+  /* Neutral scale — warm cream/brown */
+  --xingxing-cream: #fff9ed;
+  --xingxing-cream-2: #f7ecd7;
+  --xingxing-cream-3: #f0dec0;
+  --xingxing-brown-50: #fdf8f0;
+  --xingxing-brown-100: #f5ecd9;
+  --xingxing-brown-200: #eaddc3;
+  --xingxing-brown-300: #d8c6a3;
+  --xingxing-brown-400: #bfa87e;
+  --xingxing-brown-500: #9f8962;
+  --xingxing-brown-600: #7d6a4a;
+  --xingxing-brown-700: #5c4d35;
+  --xingxing-brown-800: #4a3d2a;
+  --xingxing-brown-900: #2e251a;
+
+  /* Semantic surface tokens */
+  --xingxing-background: #fff9ed;
+  --xingxing-foreground: #4a3d2a;
+  --xingxing-card: rgba(255, 255, 255, 0.92);
+  --xingxing-card-foreground: #4a3d2a;
+  --xingxing-popover: #ffffff;
+  --xingxing-popover-foreground: #4a3d2a;
+  --xingxing-primary: #f6b93b;
+  --xingxing-primary-foreground: #5c3f14;
+  --xingxing-muted: #f5ecd9;
+  --xingxing-muted-foreground: #9f8962;
+  --xingxing-border: rgba(191, 168, 126, 0.35);
+  --xingxing-input: rgba(191, 168, 126, 0.35);
+  --xingxing-ring: #f6b93b;
+
+  /* State colors */
+  --xingxing-state-success: #58b368;
+  --xingxing-state-success-bg: rgba(88, 179, 104, 0.12);
+  --xingxing-state-warning: #f2a65a;
+  --xingxing-state-warning-bg: rgba(242, 166, 90, 0.12);
+  --xingxing-state-error: #e46f5f;
+  --xingxing-state-error-bg: rgba(228, 111, 95, 0.12);
+  --xingxing-state-info: #6f9fd8;
+  --xingxing-state-info-bg: rgba(111, 159, 216, 0.12);
+
+  /* Radius scale — restrained, mobile-friendly */
+  --xingxing-radius-small: 8px;
+  --xingxing-radius-medium: 12px;
+  --xingxing-radius-large: 16px;
+  --xingxing-radius-full: 9999px;
+
+  /* Shadows — only floating layers exceed 0.05 alpha */
+  --xingxing-shadow-sm: 0 2px 6px rgba(140, 110, 60, 0.05);
+  --xingxing-shadow-md: 0 4px 12px rgba(140, 110, 60, 0.05);
+  --xingxing-shadow-lg: 0 8px 24px rgba(140, 110, 60, 0.08);
+  --xingxing-shadow-float: 0 18px 50px rgba(90, 64, 20, 0.18);
+
+  /* Typography */
+  --xingxing-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --xingxing-font-mono: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Layout */
+  --xingxing-safe-top: env(safe-area-inset-top, 0px);
+  --xingxing-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --xingxing-nav-height: 64px;
+  --xingxing-max-width: 480px;
+}
+
+@theme inline {
+  --color-background: var(--xingxing-background);
+  --color-foreground: var(--xingxing-foreground);
+  --color-card: var(--xingxing-card);
+  --color-card-foreground: var(--xingxing-card-foreground);
+  --color-popover: var(--xingxing-popover);
+  --color-popover-foreground: var(--xingxing-popover-foreground);
+  --color-primary: var(--xingxing-primary);
+  --color-primary-foreground: var(--xingxing-primary-foreground);
+  --color-muted: var(--xingxing-muted);
+  --color-muted-foreground: var(--xingxing-muted-foreground);
+  --color-border: var(--xingxing-border);
+  --color-input: var(--xingxing-input);
+  --color-ring: var(--xingxing-ring);
+  --radius-sm: var(--xingxing-radius-small);
+  --radius-md: var(--xingxing-radius-medium);
+  --radius-lg: var(--xingxing-radius-large);
+  --radius-full: var(--xingxing-radius-full);
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    font-family: var(--xingxing-font-sans);
+    background: var(--xingxing-background);
+    color: var(--xingxing-foreground);
+    line-height: 1.5;
+  }
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-background: var(--xingxing-background);
+    --color-foreground: var(--xingxing-foreground);
+    --color-card: var(--xingxing-card);
+    --color-card-foreground: var(--xingxing-card-foreground);
+    --color-popover: var(--xingxing-popover);
+    --color-popover-foreground: var(--xingxing-popover-foreground);
+    --color-primary: var(--xingxing-primary);
+    --color-primary-foreground: var(--xingxing-primary-foreground);
+    --color-muted: var(--xingxing-muted);
+    --color-muted-foreground: var(--xingxing-muted-foreground);
+    --color-border: var(--xingxing-border);
+    --color-input: var(--xingxing-input);
+    --color-ring: var(--xingxing-ring);
+    --radius-sm: var(--xingxing-radius-small);
+    --radius-md: var(--xingxing-radius-medium);
+    --radius-lg: var(--xingxing-radius-large);
+    --radius-full: var(--xingxing-radius-full);
+  }
+  @layer base {
+    body { background: var(--xingxing-background); color: var(--xingxing-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style id="semantic-token-fallback">
+      .bg-background { background-color: var(--xingxing-background); }
+      .text-background { color: var(--xingxing-background); }
+      .border-background { border-color: var(--xingxing-background); }
+      .ring-background { --tw-ring-color: var(--xingxing-background); }
+      .bg-foreground { background-color: var(--xingxing-foreground); }
+      .text-foreground { color: var(--xingxing-foreground); }
+      .border-foreground { border-color: var(--xingxing-foreground); }
+      .ring-foreground { --tw-ring-color: var(--xingxing-foreground); }
+      .bg-card { background-color: var(--xingxing-card); }
+      .text-card { color: var(--xingxing-card); }
+      .border-card { border-color: var(--xingxing-card); }
+      .ring-card { --tw-ring-color: var(--xingxing-card); }
+      .bg-card-foreground { background-color: var(--xingxing-card-foreground); }
+      .text-card-foreground { color: var(--xingxing-card-foreground); }
+      .border-card-foreground { border-color: var(--xingxing-card-foreground); }
+      .ring-card-foreground { --tw-ring-color: var(--xingxing-card-foreground); }
+      .bg-popover { background-color: var(--xingxing-popover); }
+      .text-popover { color: var(--xingxing-popover); }
+      .border-popover { border-color: var(--xingxing-popover); }
+      .ring-popover { --tw-ring-color: var(--xingxing-popover); }
+      .bg-popover-foreground { background-color: var(--xingxing-popover-foreground); }
+      .text-popover-foreground { color: var(--xingxing-popover-foreground); }
+      .border-popover-foreground { border-color: var(--xingxing-popover-foreground); }
+      .ring-popover-foreground { --tw-ring-color: var(--xingxing-popover-foreground); }
+      .bg-primary { background-color: var(--xingxing-primary); }
+      .text-primary { color: var(--xingxing-primary); }
+      .border-primary { border-color: var(--xingxing-primary); }
+      .ring-primary { --tw-ring-color: var(--xingxing-primary); }
+      .bg-primary-foreground { background-color: var(--xingxing-primary-foreground); }
+      .text-primary-foreground { color: var(--xingxing-primary-foreground); }
+      .border-primary-foreground { border-color: var(--xingxing-primary-foreground); }
+      .ring-primary-foreground { --tw-ring-color: var(--xingxing-primary-foreground); }
+      .bg-muted { background-color: var(--xingxing-muted); }
+      .text-muted { color: var(--xingxing-muted); }
+      .border-muted { border-color: var(--xingxing-muted); }
+      .ring-muted { --tw-ring-color: var(--xingxing-muted); }
+      .bg-muted-foreground { background-color: var(--xingxing-muted-foreground); }
+      .text-muted-foreground { color: var(--xingxing-muted-foreground); }
+      .border-muted-foreground { border-color: var(--xingxing-muted-foreground); }
+      .ring-muted-foreground { --tw-ring-color: var(--xingxing-muted-foreground); }
+      .bg-border { background-color: var(--xingxing-border); }
+      .text-border { color: var(--xingxing-border); }
+      .border-border { border-color: var(--xingxing-border); }
+      .ring-border { --tw-ring-color: var(--xingxing-border); }
+      .bg-input { background-color: var(--xingxing-input); }
+      .text-input { color: var(--xingxing-input); }
+      .border-input { border-color: var(--xingxing-input); }
+      .ring-input { --tw-ring-color: var(--xingxing-input); }
+      .bg-ring { background-color: var(--xingxing-ring); }
+      .text-ring { color: var(--xingxing-ring); }
+      .border-ring { border-color: var(--xingxing-ring); }
+      .ring-ring { --tw-ring-color: var(--xingxing-ring); }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

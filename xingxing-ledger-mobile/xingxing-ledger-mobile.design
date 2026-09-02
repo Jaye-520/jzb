@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": "page-index",
+      "title": "星星人记账工作台",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1788321900000,
+      "canvasData": {
+        "x": 0,
+        "y": 0,
+        "group": 0,
+        "layoutSnapshot": {
+          "version": 1,
+          "contentHeight": 900,
+          "viewportWidth": 375,
+          "sourceHash": "fnv1a-5000735e",
+          "measuredAt": 1788324778401
+        }
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/index.html",
+        "interactions": []
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": true,
+    "deviceType": "mobile",
+    "projectName": "星星人记账工作台移动端重设计",
+    "showEdge": false,
+    "visualEditorEnabled": false
+  }
+}
